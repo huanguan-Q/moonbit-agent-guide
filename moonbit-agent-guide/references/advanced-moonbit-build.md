@@ -1,6 +1,6 @@
 ## Conditional Compilation
 
-Target specific backends/modes in `moon.pkg`. Legacy `moon.pkg.json` files remain supported; use the current format for new examples.
+Target specific backends/modes in `moon.pkg`. Legacy `moon.pkg.json` is hard-rejected by current toolchains (run `moon fmt` to migrate); use the current format for new examples.
 
 The configuration examples below are independent. When combining them in one package, merge their fields into a single `options(...)` block.
 

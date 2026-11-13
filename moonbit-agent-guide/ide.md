@@ -6,15 +6,16 @@
 
 ## Core Commands
 
-- `moon ide doc <query>`: Search API docs and symbols.
-- `moon ide peek-def <symbol> [--loc path[:line[:col]]]`: Show definition context for a symbol.
-- `moon ide find-references <symbol> [--loc path[:line[:col]]]`: Find usages of a symbol.
+- `moon ide doc <query>`: Search API docs and symbols. (`moon doc <SYMBOL>` at top level is deprecated — use `moon ide doc`.)
+- `moon ide peek-def <symbol> [--loc path[:line[:col]]] [--json]`: Show definition context for a symbol.
+- `moon ide find-references <symbol> [--loc path[:line[:col]]] [--json]`: Find usages of a symbol.
 - `moon ide rename <symbol> <new_name> [--loc path[:line[:col]]]`: Preview semantic rename edits; add `--apply` to rewrite files.
-- `moon ide hover <symbol> --loc path:line[:col]`: Show type/doc info at a location.
+- `moon ide hover <symbol> --loc path:line[:col] [--json]`: Show type/doc info at a location.
 - `moon ide outline <dir|file>`: List top-level symbols in a package/file.
 - `moon ide analyze [path]`: Show public API usage summary of a package/module.
 - `moon ide workspace-symbols <query> --json`: Search top-level workspace symbols.
 - `moon ide codelens <file> --json`: Show reference counts for a file.
+- `moon ide gen-symbols`: Write all symbols of the current package to `./symbols.jsonl` (for tooling/tests; no stdout output).
 
 ## Practical Examples
 
